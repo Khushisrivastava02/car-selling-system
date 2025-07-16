@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>All Cars</h2>
+<ul>
+    {% for car in cars %}
+    <li><a href="{{ url_for('select_car', car_name=car.name) }}">{{ car.name }}</a> - ₹{{ car.price }} - {{ car.fuel }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
