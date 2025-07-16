@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Car Suggestions</h2>
+<form method="POST">
+    <input type="number" name="budget" placeholder="Max Budget">
+    <input type="text" name="fuel" placeholder="Fuel Type">
+    <button type="submit">Get Suggestions</button>
+</form>
+<ul>
+    {% for car in cars %}
+    <li>{{ car.name }} - ₹{{ car.price }} - {{ car.fuel }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
