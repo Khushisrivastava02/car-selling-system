@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Car Details</h2>
+<p><strong>Name:</strong> {{ car.name }}</p>
+<p><strong>Price:</strong> ₹{{ car.price }}</p>
+<p><strong>Fuel:</strong> {{ car.fuel }}</p>
+<a href="{{ url_for('view_cars') }}">Back to Cars List</a>
+{% endblock %}
+{% extends 'base.html' %}
+{% block content %}
+<h2>Car Details</h2>
+<p><strong>Name:</strong> {{ car.name }}</p>
+<p><strong>Price:</strong> ₹{{ car.price }}</p>
+<p><strong>Fuel:</strong> {{ car.fuel }}</p>
+<a href="{{ url_for('view_cars') }}">Back to Cars List</a>
+{% endblock %}
