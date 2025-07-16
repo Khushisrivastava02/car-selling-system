@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Search Car</h2>
+<form method="POST">
+    <input type="text" name="query" placeholder="Search by name">
+    <button type="submit">Search</button>
+</form>
+<ul>
+    {% for car in cars %}
+    <li>{{ car.name }} - ₹{{ car.price }} - {{ car.fuel }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
